@@ -1,0 +1,21 @@
+:root{
+    --grid-size: 0; 
+}
+
+div {
+    border: 1px solid black; 
+    padding: 2px;
+}
+
+.canvas{
+    display: grid; 
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-rows: repeat(var(--grid-size), 1fr);
+}
+
+
+.cell{
+    background-color: green;
+}
+
+
