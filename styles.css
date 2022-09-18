@@ -1,21 +1,33 @@
-:root{
-    --grid-size: 0; 
+* {
+    box-sizing: border-box;
 }
 
-div {
-    border: 1px solid black; 
-    padding: 2px;
+:root{
+    --grid-size: 0; 
+    --grid-border-color: lightgrey;
+    --grid-shadow-color: black;
+    --grid-height: 600px;
 }
 
 .canvas{
     display: grid; 
     grid-template-columns: repeat(var(--grid-size), 1fr);
     grid-template-rows: repeat(var(--grid-size), 1fr);
+    
+    border-top: 1px solid var(--grid-border-color);
+    border-left: 1px solid var(--grid-border-color);
+    box-shadow: 0 0 0 4px var(--grid-shadow-color);
+
+    height: var(--grid-height); 
+    width: var(--grid-height); 
 }
 
 
 .cell{
-    background-color: green;
+    background-color: white;
+    border-bottom: 1px solid var(--grid-border-color);
+    border-right: 1px solid var(--grid-border-color);
+
 }
 
 
