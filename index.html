@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-sketch</title>
     <script src="script.js" defer="defer"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- 32x32 -->
-    <div class="canvas" data-size="32">
-        
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c41dfe230e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="title">
+      <span>ETCH-A-SKETCH</span>
+    </header>
+
+    <div class="canvas-wrapper">
+      <div class="tools">
+        <div class="bgc-tool">BG</div>
+        <div class="eraser-tool"><i class="fa-solid fa-eraser"></i></div>
+        <div class="color-picker-tool"><i class="fas fa-brush"></i></div>
+        <div class="paint-bucket-tool"><i class="fa-solid fa-fill"></i></div>
+        <div class="pixels-increase-tool"><i class="fa-solid fa-plus"></i></div>
+        <div class="pixels-decrease-tool">
+          <i class="fa-solid fa-minus"></i>
+        </div>
+        <div class="all-clear-tool"><i class="fa-solid fa-trash-can"></i></div>
+      </div>
+      <div class="canvas" data-size="32"></div>
     </div>
-</body>
+
+    <!-- 32x32 -->
+  </body>
 </html>

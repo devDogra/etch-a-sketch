@@ -1,12 +1,62 @@
 * {
     box-sizing: border-box;
+
+
+    /* border: solid;  */
+
+    /* border: 1px solid black;  */
 }
 
 :root{
     --grid-size: 0; 
     --grid-border-color: lightgrey;
-    --grid-shadow-color: black;
+    --grid-shadow-color:black; 
     --grid-height: 600px;
+    --cell-bgc: white; 
+    --tool-bgc: rgba(238, 174, 109, 0.768);
+    --tool-bgc-hover: rgb(253, 237, 202);
+    --tool-border-color: rgb(177, 110, 9);
+}
+
+.title{
+    font-size: 4rem; 
+    padding: 1rem; 
+    font-weight: bolder;
+    font-family: monospace;
+    /* border: 4px solid pink; */
+
+    text-align: center;
+}
+
+.canvas-wrapper{
+    display: flex; 
+    /* background-color: pink; */
+    justify-content: center;
+    padding: 2rem; 
+}
+.tools{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 3rem;
+    /* background-color: pink; */
+
+    padding-right: 50px;
+
+    
+}
+.tools>div{
+    margin: 10px; 
+    border: 2px solid var(--tool-border-color);
+    background-color: var(--tool-bgc);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--grid-shadow-color); 
+}
+.tools>div:hover{
+    background-color: var(--tool-bgc-hover);
+    cursor: pointer;
 }
 
 .canvas{
@@ -16,15 +66,17 @@
     
     border-top: 1px solid var(--grid-border-color);
     border-left: 1px solid var(--grid-border-color);
-    box-shadow: 0 0 0 4px var(--grid-shadow-color);
+    box-shadow: 0 0 10px var(--grid-shadow-color);
 
     height: var(--grid-height); 
     width: var(--grid-height); 
+
+
 }
 
 
 .cell{
-    background-color: white;
+    background-color: var(--cell-bgc); 
     border-bottom: 1px solid var(--grid-border-color);
     border-right: 1px solid var(--grid-border-color);
 
